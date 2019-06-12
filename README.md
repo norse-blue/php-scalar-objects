@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>PHP Scalar Objects</h1>
-  <p align="center"> 
+    <h1>PHP Scalar Objects</h1>
+    <p align="center">
         <a href="https://packagist.org/packages/norse-blue/scalar-objects"><img alt="Stable Release" src="https://img.shields.io/packagist/v/norse-blue/scalar-objects.svg?style=flat-square&label=release&logo=packagist&logoColor=eceff4&colorA=4c566a&colorB=5e81ac"></a>
         <a href="https://travis-ci.com/norse-blue/php-scalar-objects"><img alt="Build Status" src="https://img.shields.io/travis/com/norse-blue/php-scalar-objects.svg?style=flat-square&label=build&logo=travis-ci&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"></a>
         <a href="https://php.net/releases"><img alt="PHP Version" src="https://img.shields.io/packagist/php-v/norse-blue/scalar-objects.svg?style=flat-square&label=php&logo=php&logoColor=eceff4&colorA=4c566a&colorB=b48ead"></a>
