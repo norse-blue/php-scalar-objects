@@ -6,16 +6,16 @@ namespace NorseBlue\ScalarObjects\Functions;
 
 use NorseBlue\ScalarObjects\Types\FloatType;
 use NorseBlue\ScalarObjects\Types\IntType;
-use NorseBlue\ScalarObjects\Types\NumericType;
+use NorseBlue\ScalarObjects\Types\NumberType;
 
 /**
  * Create a new IntType object.
  *
- * @param int|float|NumericType $value
+ * @param int|float|NumberType $value
  *
- * @return \NorseBlue\ScalarObjects\Types\NumericType
+ * @return \NorseBlue\ScalarObjects\Types\NumberType
  */
-function numeric($value = 0): NumericType
+function numeric($value = 0): NumberType
 {
     if (is_float($value)) {
         return new FloatType($value);

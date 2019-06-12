@@ -8,7 +8,7 @@ use NorseBlue\ScalarObjects\Tests\TestCase;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\FloatType;
 use NorseBlue\ScalarObjects\Types\IntType;
-use NorseBlue\ScalarObjects\Types\NumericType;
+use NorseBlue\ScalarObjects\Types\NumberType;
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\float;
 use function NorseBlue\ScalarObjects\Functions\int;
@@ -77,7 +77,7 @@ class CreateTypeObjectsTest extends TestCase
     {
         $subject = numeric();
 
-        $this->assertInstanceOf(NumericType::class, $subject);
+        $this->assertInstanceOf(NumberType::class, $subject);
         $this->assertInstanceOf(IntType::class, $subject);
         $this->assertEquals(0, $subject->value);
     }
@@ -88,8 +88,8 @@ class CreateTypeObjectsTest extends TestCase
         $subject_int = numeric(3);
         $subject_float = numeric(3.9);
 
-        $this->assertInstanceOf(NumericType::class, $subject_int);
-        $this->assertInstanceOf(NumericType::class, $subject_float);
+        $this->assertInstanceOf(NumberType::class, $subject_int);
+        $this->assertInstanceOf(NumberType::class, $subject_float);
         $this->assertInstanceOf(IntType::class, $subject_int);
         $this->assertInstanceOf(FloatType::class, $subject_float);
         $this->assertEquals(3, $subject_int->value);

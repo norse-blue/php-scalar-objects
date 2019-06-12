@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace NorseBlue\ScalarObjects\Functions;
 
 use NorseBlue\ScalarObjects\Types\IntType;
-use NorseBlue\ScalarObjects\Types\NumericType;
+use NorseBlue\ScalarObjects\Types\NumberType;
 
 /**
  * Create a new IntType object.
  *
- * @param int|float|NumericType $value
+ * @param int|float|NumberType $value
  *
  * @return \NorseBlue\ScalarObjects\Types\IntType
  */

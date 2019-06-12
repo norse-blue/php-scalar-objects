@@ -10,7 +10,7 @@ use function NorseBlue\ScalarObjects\Functions\bool;
 /**
  * @property int|float $value
  */
-abstract class NumericType extends PrimitiveType
+abstract class NumberType extends PrimitiveType
 {
     /**
      * @inheritDoc
