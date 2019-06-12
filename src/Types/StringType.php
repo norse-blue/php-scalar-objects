@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace NorseBlue\ScalarObjects\Types;
 
 use NorseBlue\ScalarObjects\PrimitiveType;
-use function NorseBlue\ScalarObjects\Functions\bool;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
+use function NorseBlue\ScalarObjects\Functions\bool;
 
 /**
  * @property string $value
@@ -40,7 +40,7 @@ final class StringType extends PrimitiveType
      *
      * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
-    final public function isEmpty(): BoolType
+    public function isEmpty(): BoolType
     {
         return bool($this->value === '');
     }
