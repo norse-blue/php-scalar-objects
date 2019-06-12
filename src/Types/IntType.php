@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace NorseBlue\ScalarObjects\Types;
 
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
-use function NorseBlue\ScalarObjects\Functions\float;
 
 /**
  * @property int $value
@@ -24,15 +23,5 @@ final class IntType extends NumberType
         }
 
         parent::__construct((int)self::unwrap($value));
-    }
-
-    /**
-     * Convert the value to float.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\FloatType
-     */
-    public function toFloat(): FloatType
-    {
-        return float($this->value);
     }
 }
