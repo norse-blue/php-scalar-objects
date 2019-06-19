@@ -23,7 +23,6 @@ final class BoolAndExtension extends BoolType implements ExtensionMethod
          * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function (...$bools): BoolType {
-
             if ($this->value === false) {
                 return bool(false);
             }
