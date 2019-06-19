@@ -12,7 +12,7 @@ use NorseBlue\ScalarObjects\Types\NumberType;
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\float;
 use function NorseBlue\ScalarObjects\Functions\int;
-use function NorseBlue\ScalarObjects\Functions\numeric;
+use function NorseBlue\ScalarObjects\Functions\number;
 use function NorseBlue\ScalarObjects\Functions\string;
 use NorseBlue\ScalarObjects\Types\StringType;
 
@@ -75,7 +75,7 @@ class CreateTypeObjectsTest extends TestCase
     /** @test */
     public function numeric_type_object_is_created_using_function_with_default_value()
     {
-        $subject = numeric();
+        $subject = number();
 
         $this->assertInstanceOf(NumberType::class, $subject);
         $this->assertInstanceOf(IntType::class, $subject);
@@ -85,8 +85,8 @@ class CreateTypeObjectsTest extends TestCase
     /** @test */
     public function numeric_type_object_is_created_using_function_with_given_value()
     {
-        $subject_int = numeric(3);
-        $subject_float = numeric(3.9);
+        $subject_int = number(3);
+        $subject_float = number(3.9);
 
         $this->assertInstanceOf(NumberType::class, $subject_int);
         $this->assertInstanceOf(NumberType::class, $subject_float);

@@ -15,7 +15,7 @@ use NorseBlue\ScalarObjects\Types\NumberType;
  *
  * @return \NorseBlue\ScalarObjects\Types\NumberType
  */
-function numeric($value = 0): NumberType
+function number($value = 0): NumberType
 {
     if (is_float($value)) {
         return new FloatType($value);

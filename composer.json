@@ -36,7 +36,7 @@
       "src/Functions/bool.php",
       "src/Functions/float.php",
       "src/Functions/int.php",
-      "src/Functions/numeric.php",
+      "src/Functions/number.php",
       "src/Functions/string.php"
     ],
     "psr-4": {
