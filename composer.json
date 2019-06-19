@@ -23,6 +23,7 @@
   },
   "require": {
     "php": "^7.3",
+    "norse-blue/extensible-objects": "^0.5.1",
     "norse-blue/value-objects": "dev-master"
   },
   "require-dev": {
@@ -37,7 +38,9 @@
       "src/Functions/float.php",
       "src/Functions/int.php",
       "src/Functions/number.php",
-      "src/Functions/string.php"
+      "src/Functions/path_merge.php",
+      "src/Functions/string.php",
+      "src/bootstrap.php"
     ],
     "psr-4": {
       "NorseBlue\\ScalarObjects\\": "src/"

@@ -65,7 +65,7 @@ class NumberType extends PrimitiveType
      *
      * @return \NorseBlue\ScalarObjects\Types\FloatType
      */
-    public function toFloat(): FloatType
+    final public function toFloat(): FloatType
     {
         return float($this->value);
     }
@@ -75,7 +75,7 @@ class NumberType extends PrimitiveType
      *
      * @return \NorseBlue\ScalarObjects\Types\IntType
      */
-    public function toInt(): IntType
+    final public function toInt(): IntType
     {
         return int($this->value);
     }

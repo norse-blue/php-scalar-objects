@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace NorseBlue\ScalarObjects;
 
+use NorseBlue\ExtensibleObjects\Contracts\Extensible;
+use NorseBlue\ExtensibleObjects\Traits\HandlesExtensionMethods;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ValueObjects\Immutable\ImmutableSimpleValueObject;
 use function NorseBlue\ScalarObjects\Functions\bool;
 
-abstract class PrimitiveType extends ImmutableSimpleValueObject
+abstract class PrimitiveType extends ImmutableSimpleValueObject implements Extensible
 {
+    use HandlesExtensionMethods;
+
     /**
      * Check if the value is equal to the given value.
      *

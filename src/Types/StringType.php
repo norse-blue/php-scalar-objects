@@ -11,7 +11,7 @@ use function NorseBlue\ScalarObjects\Functions\bool;
 /**
  * @property string $value
  */
-final class StringType extends PrimitiveType
+class StringType extends PrimitiveType
 {
     /**
      * Create a new instance.
@@ -30,7 +30,7 @@ final class StringType extends PrimitiveType
     /**
      * @inheritDoc
      */
-    public function isValid($value): bool
+    final public function isValid($value): bool
     {
         return is_string($value) || $value instanceof self;
     }
@@ -40,7 +40,7 @@ final class StringType extends PrimitiveType
      *
      * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
-    public function isEmpty(): BoolType
+    final public function isEmpty(): BoolType
     {
         return bool($this->value === '');
     }

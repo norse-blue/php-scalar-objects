@@ -8,9 +8,17 @@ use NorseBlue\ScalarObjects\PrimitiveType;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
 
 /**
+ * Primitive bool type as an object.
+ *
  * @property bool $value
+ *
+ * @method self and(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolAndExtension
+ * @method self equals(bool|self $bool) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolEqualsExtension
+ * @method self not() @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolNotExtension
+ * @method self or(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolOrExtension
+ * @method self xor(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolXorExtension
  */
-final class BoolType extends PrimitiveType
+class BoolType extends PrimitiveType
 {
     /**
      * Create a new instance.
@@ -27,19 +35,11 @@ final class BoolType extends PrimitiveType
     }
 
     /**
-     * @inheritDoc
-     */
-    public function isValid($value): bool
-    {
-        return is_bool($value) || $value instanceof self;
-    }
-
-    /**
      * Check if the value is false.
      *
      * @return bool True if value is false, false otherwise.
      */
-    public function isFalse(): bool
+    final public function isFalse(): bool
     {
         return $this->value === false;
     }
@@ -49,8 +49,16 @@ final class BoolType extends PrimitiveType
      *
      * @return bool True if value is true, false otherwise.
      */
-    public function isTrue(): bool
+    final public function isTrue(): bool
     {
         return $this->value === true;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    final public function isValid($value): bool
+    {
+        return is_bool($value) || $value instanceof self;
     }
 }

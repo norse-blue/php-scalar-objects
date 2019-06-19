@@ -9,7 +9,7 @@ use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
 /**
  * @property int $value
  */
-final class IntType extends NumberType
+class IntType extends NumberType
 {
     /**
      * Create a new instance.
