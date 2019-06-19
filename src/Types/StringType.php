@@ -30,7 +30,7 @@ final class StringType extends PrimitiveType
     /**
      * @inheritDoc
      */
-    protected function isValid($value): bool
+    public function isValid($value): bool
     {
         return is_string($value) || $value instanceof self;
     }

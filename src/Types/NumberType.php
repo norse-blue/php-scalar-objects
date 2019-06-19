@@ -25,7 +25,7 @@ class NumberType extends PrimitiveType
     /**
      * @inheritDoc
      */
-    final protected function isValid($value): bool
+    final public function isValid($value): bool
     {
         return is_int($value) || is_float($value) || $value instanceof self;
     }

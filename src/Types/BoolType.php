@@ -29,7 +29,7 @@ final class BoolType extends PrimitiveType
     /**
      * @inheritDoc
      */
-    protected function isValid($value): bool
+    public function isValid($value): bool
     {
         return is_bool($value) || $value instanceof self;
     }
