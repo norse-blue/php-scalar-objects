@@ -23,7 +23,7 @@
   },
   "require": {
     "php": "^7.3",
-    "norse-blue/extensible-objects": "^0.5.1",
+    "norse-blue/extensible-objects": "dev-master",
     "norse-blue/value-objects": "dev-master"
   },
   "require-dev": {
