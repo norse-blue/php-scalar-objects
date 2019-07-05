@@ -7,6 +7,8 @@ namespace NorseBlue\ScalarObjects\Types;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
 
 /**
+ * Integer type as object.
+ *
  * @property int $value
  */
 class IntType extends NumberType

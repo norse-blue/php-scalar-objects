@@ -1,0 +1,22 @@
+<?php
+
+namespace NorseBlue\ScalarObjects\Tests\Extensions\String;
+
+use NorseBlue\ScalarObjects\Facades\StringFacade as Str;
+use NorseBlue\ScalarObjects\Tests\TestCase;
+
+class StringCamelTest extends TestCase
+{
+    /** @test */
+    public function test_string_camel()
+    {
+        $this->assertEquals('laravelPHPFramework', Str::camel('Laravel_p_h_p_framework')->value);
+        $this->assertEquals('laravelPhpFramework', Str::camel('Laravel_php_framework')->value);
+        $this->assertEquals('laravelPhPFramework', Str::camel('Laravel-phP-framework')->value);
+        $this->assertEquals('laravelPhpFramework', Str::camel('Laravel  -_-  php   -_-   framework   ')->value);
+        $this->assertEquals('fooBar', Str::camel('FooBar')->value);
+        $this->assertEquals('fooBar', Str::camel('foo_bar')->value);
+        $this->assertEquals('fooBarBaz', Str::camel('Foo-barBaz')->value);
+        $this->assertEquals('fooBarBaz', Str::camel('foo-bar_baz')->value);
+    }
+}

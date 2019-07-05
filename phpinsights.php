@@ -5,10 +5,12 @@ declare(strict_types=1);
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenDefineFunctions;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits;
+use ObjectCalisthenics\Sniffs\Files\FunctionLengthSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterCastSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff;
 use SlevomatCodingStandard\Sniffs\Classes\SuperfluousExceptionNamingSniff;
+use SlevomatCodingStandard\Sniffs\Functions\UnusedParameterSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\UnusedUsesSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff;
 
@@ -53,6 +55,8 @@ return [
         // Code
         DisallowMixedTypeHintSniff::class,
         ForbiddenDefineFunctions::class,
+        FunctionLengthSniff::class,
+        UnusedParameterSniff::class,
 
         // Style
         LineLengthSniff::class,

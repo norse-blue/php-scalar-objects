@@ -1,6 +1,6 @@
 <?php
 
-namespace NorseBlue\ScalarObjects\Test\Extensions\Scalars\Bool;
+namespace NorseBlue\ScalarObjects\Test\Extensions\Bool;
 
 use NorseBlue\ScalarObjects\Tests\TestCase;
 use NorseBlue\ScalarObjects\Types\BoolType;

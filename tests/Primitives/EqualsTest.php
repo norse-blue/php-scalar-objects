@@ -23,5 +23,6 @@ class EqualsTest extends TestCase
         $this->assertFalse($subject->equals(3)->value);
         $this->assertFalse($subject->equals($other_not_equal)->value);
         $this->assertFalse($subject->equals($other_type)->value);
+        $this->assertFalse($other_type->equals($subject)->value);
     }
 }
