@@ -21,5 +21,4 @@ abstract class BaseFacade extends Facade
             );
         }
     }
-
 }
