@@ -26,7 +26,7 @@ abstract class PrimitiveType extends ImmutableSimpleValueObject implements Exten
      * @return \NorseBlue\ScalarObjects\Types\BoolType Returns true if $other
      * is equal, false otherwise.
      */
-    final public function equals($other): BoolType
+    public function equals($other): BoolType
     {
         if (is_object($other) && !$other instanceof static) {
             return bool(false);

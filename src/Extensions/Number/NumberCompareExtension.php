@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NorseBlue\ScalarObjects\Extensions\Scalars\Number;
+namespace NorseBlue\ScalarObjects\Extensions\Number;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\NumberType;

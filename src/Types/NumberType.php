@@ -31,6 +31,18 @@ class NumberType extends PrimitiveType
     }
 
     /**
+     * @inheritDoc
+     */
+    final public function equals($other): BoolType
+    {
+        if (is_object($other) && !$other instanceof self) {
+            return bool(false);
+        }
+
+        return bool($this->value == static::unwrap($other));
+    }
+
+    /**
      * Check if the value is a float.
      *
      * @return \NorseBlue\ScalarObjects\Types\BoolType

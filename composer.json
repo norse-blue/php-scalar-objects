@@ -24,7 +24,9 @@
   "require": {
     "php": "^7.3",
     "norse-blue/extensible-objects": "dev-master",
-    "norse-blue/value-objects": "dev-master"
+    "norse-blue/object-facades": "dev-master",
+    "norse-blue/value-objects": "dev-master",
+    "ramsey/uuid": "^3.8"
   },
   "require-dev": {
     "nunomaduro/phpinsights": "^1.6",
