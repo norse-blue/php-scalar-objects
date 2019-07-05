@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NorseBlue\ScalarObjects\Functions;
+namespace NorseBlue\ScalarObjects;
 
 /**
  * Merge the path segments to the base path.
@@ -13,6 +13,8 @@ namespace NorseBlue\ScalarObjects\Functions;
  * @param bool $trailing_separator
  *
  * @return string
+ *
+ * @codeCoverageIgnore
  */
 function path_merge(
     string $base,

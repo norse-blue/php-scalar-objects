@@ -7,6 +7,8 @@ namespace NorseBlue\ScalarObjects\Types;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
 
 /**
+ * Float type as object.
+ *
  * @property float $value
  */
 class FloatType extends NumberType

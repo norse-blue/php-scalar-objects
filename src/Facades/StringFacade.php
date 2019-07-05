@@ -76,13 +76,6 @@ use Ramsey\Uuid\UuidInterface;
  */
 final class StringFacade extends BaseFacade
 {
-    /** @inheritDoc */
-    protected static $statics = [
-        'accord',
-        'orderedUuid',
-        'random',
-        'uuid',
-    ];
-    /** @inheritDoc */
+    /** @var string */
     protected static $target_class = StringType::class;
 }

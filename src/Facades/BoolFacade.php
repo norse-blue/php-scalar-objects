@@ -18,6 +18,6 @@ use NorseBlue\ScalarObjects\Types\BoolType;
  */
 final class BoolFacade extends BaseFacade
 {
-    /** @inheritDoc */
+    /** @var string */
     protected static $target_class = BoolType::class;
 }

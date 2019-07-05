@@ -1,6 +1,6 @@
 <?php
 
-namespace NorseBlue\ScalarObjects\Tests\Extensions\Int;
+namespace NorseBlue\ScalarObjects\Tests\Types\Int;
 
 use NorseBlue\ScalarObjects\Facades\IntFacade as Integer;
 use NorseBlue\ScalarObjects\Tests\TestCase;

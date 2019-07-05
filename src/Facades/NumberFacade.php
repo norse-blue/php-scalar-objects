@@ -26,6 +26,6 @@ use NorseBlue\ScalarObjects\Types\StringType;
  */
 class NumberFacade extends BaseFacade
 {
-    /** @inheritDoc */
+    /** @var string */
     protected static $target_class = NumberType::class;
 }

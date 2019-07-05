@@ -1,6 +1,6 @@
 <?php
 
-namespace NorseBlue\ScalarObjects\Tests\Extensions\Float;
+namespace NorseBlue\ScalarObjects\Tests\Types\Float;
 
 use NorseBlue\ScalarObjects\Facades\FloatFacade as Floating;
 use NorseBlue\ScalarObjects\Tests\TestCase;

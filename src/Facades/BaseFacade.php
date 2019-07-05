@@ -10,7 +10,7 @@ use NorseBlue\ValueObjects\ValueObject;
 
 abstract class BaseFacade extends Facade
 {
-    /** @inheritDoc */
+    /** @var string */
     protected static $target_class = ValueObject::class;
 
     protected static function enforceFacadeTargetClassType(string $class): void

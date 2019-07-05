@@ -17,6 +17,6 @@ use NorseBlue\ScalarObjects\Types\NumberType;
  */
 final class FloatFacade extends NumberFacade
 {
-    /** @inheritDoc */
+    /** @var string */
     protected static $target_class = FloatType::class;
 }

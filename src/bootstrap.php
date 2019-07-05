@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NorseBlue\Prim;
+namespace NorseBlue\ScalarObjects;
 
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\FloatType;
@@ -10,7 +10,6 @@ use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\NumberType;
 use NorseBlue\ScalarObjects\Types\StringType;
 use Symfony\Component\Finder\Finder;
-use function NorseBlue\ScalarObjects\Functions\path_merge;
 
 /**
  * @codeCoverageIgnore

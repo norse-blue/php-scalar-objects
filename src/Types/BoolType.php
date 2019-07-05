@@ -8,15 +8,21 @@ use NorseBlue\ScalarObjects\PrimitiveType;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
 
 /**
- * Primitive bool type as an object.
+ * Boolean type as object.
  *
  * @property bool $value
  *
- * @method self and(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolAndExtension
- * @method self equals(bool|self $bool) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolEqualsExtension
- * @method self not() @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolNotExtension
- * @method self or(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolOrExtension
- * @method self xor(bool|self|array<bool|self> ...$bools) @see \NorseBlue\Prim\Extensions\Scalars\Bool\BoolXorExtension
+ * @method self and(bool|self|array<bool|self> ...$bools)
+ * @method self equals(bool|self $bool)
+ * @method self not()
+ * @method self or(bool|self|array<bool|self> ...$bools)
+ * @method self xor(bool|self|array<bool|self> ...$bools)
+ *
+ * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolAndExtension
+ * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolEqualsExtension
+ * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolNotExtension
+ * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolOrExtension
+ * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolXorExtension
  */
 class BoolType extends PrimitiveType
 {

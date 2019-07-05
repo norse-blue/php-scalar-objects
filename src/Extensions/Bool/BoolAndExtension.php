@@ -28,14 +28,12 @@ final class BoolAndExtension extends BoolType implements ExtensionMethod
             }
 
             foreach ($bools as $bool) {
-                $bool = self::unwrap($bool);
-
-                if ($bool === false) {
-                    return bool(false);
-                }
-
                 if (is_array($bool)) {
                     return bool(array_shift($bool))->and(...$bool);
+                }
+
+                if (self::unwrap($bool) === false) {
+                    return bool(false);
                 }
             }
 

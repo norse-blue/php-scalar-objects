@@ -23,6 +23,11 @@
   },
   "require": {
     "php": "^7.3",
+    "ext-bcmath": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "doctrine/inflector": "^1.3",
+    "moontoast/math": "^1.1",
     "norse-blue/extensible-objects": "dev-master",
     "norse-blue/object-facades": "dev-master",
     "norse-blue/value-objects": "dev-master",
@@ -40,8 +45,8 @@
       "src/Functions/float.php",
       "src/Functions/int.php",
       "src/Functions/number.php",
-      "src/Functions/path_merge.php",
       "src/Functions/string.php",
+      "src/path_merge.php",
       "src/bootstrap.php"
     ],
     "psr-4": {
