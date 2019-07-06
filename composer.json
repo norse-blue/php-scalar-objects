@@ -31,7 +31,8 @@
     "norse-blue/extensible-objects": "dev-master",
     "norse-blue/object-facades": "dev-master",
     "norse-blue/value-objects": "dev-master",
-    "ramsey/uuid": "^3.8"
+    "ramsey/uuid": "^3.8",
+    "symfony/finder": "^4.3"
   },
   "require-dev": {
     "nunomaduro/phpinsights": "^1.6",
