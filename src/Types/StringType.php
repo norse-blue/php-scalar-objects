@@ -45,7 +45,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @method self pad(int|IntType $pad_length, string|StringType $pad_string = '0', int|IntType $pad_side = STR_PAD_BOTH)
  * @method self padLeft(int|IntType $pad_length, string|StringType $pad_string = '0')
  * @method self padRight(int|IntType $pad_length, string|StringType $pad_string = '0')
- * @method self plural()
  * @method self prefix(string|StringType $prefix)
  * @method array regexMatches(string|self $pattern, int|IntType $flags = 0)
  * @method BoolType regexPatternMatch(string|self|array $patterns)
@@ -58,7 +57,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @method self replaceFirst(string|self $search, string|self $replace)
  * @method self replaceLast(string|self $search, string|self $replace)
  * @method self right(int|IntType $length)
- * @method self singular()
  * @method self slug(string|self $separator = '-', string|self|null $language = 'en')
  * @method self snake(string|self $delimiter = '_')
  * @method self start(string|self $prefix)
@@ -102,7 +100,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPadExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPadLeftExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPadRightExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringPluralExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPrefixExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexMatchesExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexPatternMatchExtension
@@ -115,7 +112,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringReplaceFirstExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringReplaceLastExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringLeftExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringSingularExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringSlugExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringSnakeExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringStartExtension
