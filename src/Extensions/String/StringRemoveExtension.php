@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\StringType;
+use function NorseBlue\ScalarObjects\Functions\string;
 
 final class StringRemoveExtension extends StringType implements ExtensionMethod
 {
@@ -24,7 +25,15 @@ final class StringRemoveExtension extends StringType implements ExtensionMethod
         return function ($remove): StringType {
             $remove = self::unwrap($remove);
 
-            $removed = is_array($remove) ? $this->regexReplace('#(' . implode('|', $remove) . ')#', '') : $this;
+            $removed = is_array($remove)
+                ? string(
+                    @preg_replace(
+                        '#(' . implode('|', $remove) . ')#',
+                        '',
+                        $this->value
+                    )
+                )
+                : $this;
 
             return $removed->replace($remove, '')->trim();
         };

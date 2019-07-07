@@ -46,10 +46,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @method self padLeft(int|IntType $pad_length, string|StringType $pad_string = '0')
  * @method self padRight(int|IntType $pad_length, string|StringType $pad_string = '0')
  * @method self prefix(string|StringType $prefix)
- * @method array regexMatches(string|self $pattern, int|IntType $flags = 0)
- * @method BoolType regexPatternMatch(string|self|array $patterns)
- * @method self regexQuote(string|self $delimiter = '#')
- * @method self regexReplace(string|StringType|array<string|StringType> $pattern, string|StringType|array<string|StringType> $replacement, int|IntType $limit = -1)
  * @method self remove(string|StringType|array<string|StringType> $remove)
  * @method self repeat(int|IntType $times = 2)
  * @method self replace(string|StringType $search, string|StringType $replace)
@@ -101,10 +97,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPadLeftExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPadRightExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringPrefixExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexMatchesExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexPatternMatchExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexQuoteExtension
- * @see \NorseBlue\ScalarObjects\Extensions\String\StringRegexReplaceExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringRemoveExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringRepeatExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringReplaceExtension
