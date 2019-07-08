@@ -9,12 +9,12 @@ use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\FloatType;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\NumberType;
+use NorseBlue\ScalarObjects\Types\StringType;
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\float;
 use function NorseBlue\ScalarObjects\Functions\int;
 use function NorseBlue\ScalarObjects\Functions\number;
 use function NorseBlue\ScalarObjects\Functions\string;
-use NorseBlue\ScalarObjects\Types\StringType;
 
 class CreateTypeObjectsTest extends TestCase
 {

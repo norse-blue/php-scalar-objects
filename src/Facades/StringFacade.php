@@ -37,7 +37,6 @@ use Ramsey\Uuid\UuidInterface;
  * @method static StringType limit(string|StringType $value, int $limit = 100, string|StringType $end = '...')
  * @method static StringType lowerCaseFirst(string|StringType $value)
  * @method static StringType lower(string|StringType $value)
- * @method static UuidInterface orderedUuid()
  * @method static StringType pad(string|StringType $value, int|IntType $pad_length, string|StringType $pad_string = '0', int|IntType $pad_side = STR_PAD_BOTH)
  * @method static StringType padLeft(string|StringType $value, int|IntType $pad_length, string|StringType $pad_string = '0')
  * @method static StringType padRight(string|StringType $value, int|IntType $pad_length, string|StringType $pad_string = '0')
@@ -65,7 +64,6 @@ use Ramsey\Uuid\UuidInterface;
  * @method static StringType trimRight(string|StringType $value, string|StringType $character_mask = " \t\n\r\0\x0B")
  * @method static StringType upperCaseFirst(string|StringType $value)
  * @method static StringType upper(string|StringType $value)
- * @method static UuidInterface uuid()
  * @method static StringType words(string|StringType $value, int $words = 100, string|StringType $end = '...')
  */
 final class StringFacade extends BaseFacade

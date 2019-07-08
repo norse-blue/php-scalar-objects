@@ -23,14 +23,11 @@
   },
   "require": {
     "php": "^7.3",
-    "ext-bcmath": "*",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "moontoast/math": "^1.1",
     "norse-blue/extensible-objects": "dev-master",
     "norse-blue/object-facades": "dev-master",
     "norse-blue/value-objects": "dev-master",
-    "ramsey/uuid": "^3.8",
     "symfony/finder": "^4.3"
   },
   "require-dev": {

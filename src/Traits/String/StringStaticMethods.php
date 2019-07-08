@@ -6,11 +6,6 @@ namespace NorseBlue\ScalarObjects\Traits\String;
 
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
-use Ramsey\Uuid\Codec\TimestampFirstCombCodec;
-use Ramsey\Uuid\Generator\CombGenerator;
-use Ramsey\Uuid\Uuid;
-use Ramsey\Uuid\UuidFactory;
-use Ramsey\Uuid\UuidInterface;
 use function NorseBlue\ScalarObjects\Functions\string;
 
 trait StringStaticMethods
@@ -45,33 +40,6 @@ trait StringStaticMethods
     }
 
     /**
-     * Generate a time-ordered UUID (version 4).
-     *
-     * @return \Ramsey\Uuid\UuidInterface
-     *
-     * @throws \Exception
-     */
-    public static function orderedUuid(): UuidInterface
-    {
-        $factory = new UuidFactory();
-
-        $factory->setRandomGenerator(
-            new CombGenerator(
-                $factory->getRandomGenerator(),
-                $factory->getNumberConverter()
-            )
-        );
-
-        $factory->setCodec(
-            new TimestampFirstCombCodec(
-                $factory->getUuidBuilder()
-            )
-        );
-
-        return $factory->uuid4();
-    }
-
-    /**
      * Generate a more truly "random" alpha-numeric string.
      *
      * @param int|IntType $length
@@ -94,17 +62,5 @@ trait StringStaticMethods
         }
 
         return string($string);
-    }
-
-    /**
-     * Generate a UUID (version 4).
-     *
-     * @return \Ramsey\Uuid\UuidInterface
-     *
-     * @throws \Exception
-     */
-    public static function uuid(): UuidInterface
-    {
-        return Uuid::uuid4();
     }
 }
