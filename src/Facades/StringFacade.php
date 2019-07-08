@@ -7,7 +7,6 @@ namespace NorseBlue\ScalarObjects\Facades;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
-use Ramsey\Uuid\UuidInterface;
 
 /**
  * Facade to class StringType.
