@@ -1,0 +1,95 @@
+# Release 0.1.0
+
+First release.
+
+## Added :sparkles:
+
+- Added the `BoolType` scalar object type with the following methods:
+    - `and()`
+    - `equals()`
+    - `isFalse()`
+    - `isTrue()`
+    - `not()`
+    - `or()`
+    - `xor()`
+- Added the `NumberType` scalar object type with the following methods:
+    - `abs()`
+    - `compare()`
+    - `greaterThan()`
+    - `greaterThanOrEqual()`
+    - `isFloat()`
+    - `isInt()`
+    - `isZero()`
+    - `lessThan()`
+    - `lessThanOrEqual()`
+    - `pad()`
+    - `padLeft()`
+    - `padRight()`
+    - `toFloat()`
+    - `toInt()`
+- Added the `FloatType` scalar object type (sub-type of`NumberType`).
+- Added the `IntType` scalar object type (sub-type of`NumberType`).
+- Added the `StringType` scalar object type with the following methods:
+    - `accord()`
+    - `after()`
+    - `ascii()`
+    - `before()`
+    - `camel()`
+    - `concat()`
+    - `contains()`
+    - `endsWith()`
+    - `equals()`
+    - `explode()`
+    - `finish()`
+    - `isDomain()`
+    - `isEmail()`
+    - `isEmpty()`
+    - `isHostname()`
+    - `isIp()`
+    - `isMac()`
+    - `isUrl()`
+    - `kebab()`
+    - `left()`
+    - `length()`
+    - `limit()`
+    - `lowerCaseFirst()`
+    - `lower()`
+    - `pad()`
+    - `padLeft()`
+    - `padRight()`
+    - `prefix()`
+    - `random()`
+    - `remove()`
+    - `repeat()`
+    - `replace()`
+    - `replaceArray()`
+    - `replaceFirst()`
+    - `replaceLast()`
+    - `right()`
+    - `slug()`
+    - `snake()`
+    - `start()`
+    - `startsWith()`
+    - `studly()`
+    - `substr()`
+    - `suffix()`
+    - `surround()`
+    - `title()`
+    - `toggle()`
+    - `trim()`
+    - `trimLeft()`
+    - `trimRight()`
+    - `upperCaseFirst()`
+    - `upper()`
+    - `words()`
+- Added functions as a convenience method for creating scalar objects:
+    - `bool()`
+    - `float()`
+    - `int()`
+    - `number()`
+    - `string()`
+- Added facades for all scalar types for using the functions as if it were `static`.
+
+---
+
+Previous: [Release 0.0.0](CHANGELOG-0.0.0.md)
