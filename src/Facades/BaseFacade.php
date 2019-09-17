@@ -6,12 +6,12 @@ namespace NorseBlue\ScalarObjects\Facades;
 
 use NorseBlue\ObjectFacades\Exceptions\InvalidFacadeTargetClassException;
 use NorseBlue\ObjectFacades\Facade;
-use NorseBlue\ValueObjects\ValueObject;
+use NorseBlue\ValueObjects\SingleValueObject;
 
 abstract class BaseFacade extends Facade
 {
     /** @var string */
-    protected static $target_class = ValueObject::class;
+    protected static $target_class = SingleValueObject::class;
 
     protected static function enforceFacadeTargetClassType(string $class): void
     {

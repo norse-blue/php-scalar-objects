@@ -25,14 +25,14 @@
     "php": "^7.3",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "norse-blue/extensible-objects": "dev-master",
-    "norse-blue/object-facades": "dev-master",
-    "norse-blue/value-objects": "dev-master",
+    "norse-blue/extensible-objects": "^2.0",
+    "norse-blue/object-facades": "^0.1",
+    "norse-blue/value-objects": "^1.0",
     "symfony/finder": "^4.3"
   },
   "require-dev": {
-    "nunomaduro/phpinsights": "^1.6",
-    "phpstan/phpstan": "^0.11.8",
+    "nunomaduro/phpinsights": "^1.7",
+    "phpstan/phpstan": "^0.11",
     "phpunit/phpunit": "^8.2",
     "squizlabs/php_codesniffer": "^3.4"
   },

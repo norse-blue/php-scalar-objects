@@ -7,10 +7,10 @@ namespace NorseBlue\ScalarObjects;
 use NorseBlue\ExtensibleObjects\Contracts\Extensible;
 use NorseBlue\ExtensibleObjects\Traits\HandlesExtensionMethods;
 use NorseBlue\ScalarObjects\Types\BoolType;
-use NorseBlue\ValueObjects\Immutable\ImmutableSimpleValueObject;
+use NorseBlue\ValueObjects\SingleImmutableValueObject;
 use function NorseBlue\ScalarObjects\Functions\bool;
 
-abstract class PrimitiveType extends ImmutableSimpleValueObject implements Extensible
+abstract class PrimitiveType extends SingleImmutableValueObject implements Extensible
 {
     use HandlesExtensionMethods;
 
