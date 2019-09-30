@@ -42,7 +42,9 @@ class BoolOrTest extends TestCase
     /** @test */
     public function bool_or_with_php_scalar_objects_extension_syntax()
     {
-        if (!extension_loaded('scalar_objects')) return;
+        if (!extension_loaded('scalar_objects')) {
+            return;
+        }
 
         $this->assertFalse((false)->or(false)->value);
         $this->assertTrue((false)->or(true)->value);
