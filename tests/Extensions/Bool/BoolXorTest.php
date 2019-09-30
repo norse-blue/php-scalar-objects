@@ -42,7 +42,9 @@ class BoolXorTest extends TestCase
     /** @test */
     public function bool_xor_with_php_scalar_objects_extension_syntax()
     {
-        if (!extension_loaded('scalar_objects')) return;
+        if (!extension_loaded('scalar_objects')) {
+            return;
+        }
 
         $this->assertFalse((false)->xor(false)->value);
         $this->assertTrue((false)->xor(true)->value);

@@ -27,7 +27,9 @@ class FloatGreaterThanTest extends TestCase
     /** @test */
     public function float_greater_than_with_php_scalar_objects_extension_syntax()
     {
-        if (!extension_loaded('scalar_objects')) return;
+        if (!extension_loaded('scalar_objects')) {
+            return;
+        }
 
         $this->assertFalse((3.0)->greaterThan(9)->value);
         $this->assertFalse((3.0)->greaterThan(9.1)->value);

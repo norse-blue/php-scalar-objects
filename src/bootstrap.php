@@ -66,8 +66,7 @@ use Symfony\Component\Finder\Finder;
     }
 
     // Register scalar object handlers if the PHP extension scalar_objects is available
-    if(extension_loaded('scalar_objects'))
-    {
+    if (extension_loaded('scalar_objects')) {
         register_primitive_type_handler('bool', BoolFacade::class);
         register_primitive_type_handler('float', FloatFacade::class);
         register_primitive_type_handler('int', IntFacade::class);

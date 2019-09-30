@@ -23,7 +23,9 @@ class FloatAbsTest extends TestCase
     /** @test */
     public function float_abs_with_php_scalar_objects_extension_syntax()
     {
-        if (!extension_loaded('scalar_objects')) return;
+        if (!extension_loaded('scalar_objects')) {
+            return;
+        }
 
         $this->assertInstanceOf(IntType::class, (9)->abs());
         $this->assertInstanceOf(FloatType::class, (9.3)->abs());

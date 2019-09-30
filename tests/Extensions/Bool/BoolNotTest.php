@@ -22,7 +22,9 @@ class BoolNotTest extends TestCase
     /** @test */
     public function bool_not_with_php_scalar_objects_extension_syntax()
     {
-        if (!extension_loaded('scalar_objects')) return;
+        if (!extension_loaded('scalar_objects')) {
+            return;
+        }
 
         $true = (false)->not();
 
