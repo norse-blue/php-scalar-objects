@@ -18,4 +18,14 @@ class BoolNotTest extends TestCase
         $this->assertTrue($true->value);
         $this->assertNotSame($false, $true);
     }
+
+    /** @test */
+    public function bool_not_with_php_scalar_objects_extension_syntax()
+    {
+        if (!extension_loaded('scalar_objects')) return;
+
+        $true = (false)->not();
+
+        $this->assertTrue($true->value);
+    }
 }

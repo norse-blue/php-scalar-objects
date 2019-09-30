@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace NorseBlue\ScalarObjects;
 
+use NorseBlue\ScalarObjects\Facades\BoolFacade;
+use NorseBlue\ScalarObjects\Facades\FloatFacade;
+use NorseBlue\ScalarObjects\Facades\IntFacade;
+use NorseBlue\ScalarObjects\Facades\StringFacade;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\FloatType;
 use NorseBlue\ScalarObjects\Types\IntType;
@@ -59,5 +63,14 @@ use Symfony\Component\Finder\Finder;
 
             $class::registerExtensionMethod(lcfirst($name), $extension);
         }
+    }
+
+    // Register scalar object handlers if the PHP extension scalar_objects is available
+    if(extension_loaded('scalar_objects'))
+    {
+        register_primitive_type_handler('bool', BoolFacade::class);
+        register_primitive_type_handler('float', FloatFacade::class);
+        register_primitive_type_handler('int', IntFacade::class);
+        register_primitive_type_handler('string', StringFacade::class);
     }
 })();
