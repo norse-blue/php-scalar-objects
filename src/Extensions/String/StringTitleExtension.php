@@ -17,8 +17,6 @@ final class StringTitleExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the given string to title case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             $value = $this->value;

@@ -19,8 +19,6 @@ final class StringStartExtension extends StringType implements ExtensionMethod
          * Begin a string with a single instance of a given value.
          *
          * @param string|StringType $prefix
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($prefix): StringType {
             $value = $this->value;

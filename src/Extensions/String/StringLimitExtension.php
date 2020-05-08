@@ -21,8 +21,6 @@ final class StringLimitExtension extends StringType implements ExtensionMethod
          *
          * @param int|IntType $limit
          * @param string|StringType $end
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($limit = 100, $end = '...'): StringType {
             $value = $this->value;

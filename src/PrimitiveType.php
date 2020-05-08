@@ -28,7 +28,7 @@ abstract class PrimitiveType extends SingleImmutableValueObject implements Exten
      */
     public function equals($other): BoolType
     {
-        if (is_object($other) && !$other instanceof static) {
+        if (is_object($other) && ! $other instanceof static) {
             return bool(false);
         }
 

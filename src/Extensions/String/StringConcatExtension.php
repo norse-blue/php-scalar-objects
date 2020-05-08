@@ -19,8 +19,6 @@ final class StringConcatExtension extends StringType implements ExtensionMethod
          * Concatenates the given strings.
          *
          * @param string|StringType ...$strings
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (...$strings): StringType {
             $value = $this->value;

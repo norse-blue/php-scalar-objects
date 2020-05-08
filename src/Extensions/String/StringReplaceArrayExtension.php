@@ -20,8 +20,6 @@ final class StringReplaceArrayExtension extends StringType implements ExtensionM
          *
          * @param string|StringType $search
          * @param array<string|StringType> $replace
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($search, array $replace): StringType {
             $subject = $this;

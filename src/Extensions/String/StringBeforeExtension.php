@@ -19,8 +19,6 @@ final class StringBeforeExtension extends StringType implements ExtensionMethod
          * Get the portion of the value before a given value.
          *
          * @param string|StringType $search
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($search): StringType {
             $value = $this->value;

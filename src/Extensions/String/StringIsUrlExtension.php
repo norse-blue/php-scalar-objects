@@ -26,8 +26,6 @@ final class StringIsUrlExtension extends StringType implements ExtensionMethod
          *                              - FILTER_FLAG_PATH_REQUIRED
          *                              - FILTER_FLAG_QUERY_REQUIRED
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/function.filter-var.php
          */
         return function ($flags = FILTER_FLAG_NONE): BoolType {

@@ -19,13 +19,11 @@ final class StringSnakeExtension extends StringType implements ExtensionMethod
          * Convert a string to snake case.
          *
          * @param string|StringType $delimiter
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($delimiter = '_'): StringType {
             $value = $this->value;
 
-            if (!ctype_lower($value)) {
+            if (! ctype_lower($value)) {
                 $delimiter = self::unwrap($delimiter);
 
                 $value = preg_replace('/\s+/u', '', ucwords($value));

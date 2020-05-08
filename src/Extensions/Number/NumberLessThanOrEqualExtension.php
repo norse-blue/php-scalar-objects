@@ -20,8 +20,6 @@ final class NumberLessThanOrEqualExtension extends NumberType implements Extensi
          * Check if the value is less than or equal to the given number.
          *
          * @param int|float|NumberType $number
-         *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function ($number): BoolType {
             return bool($this->value <= self::unwrap($number));

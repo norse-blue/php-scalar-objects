@@ -10,8 +10,6 @@ use NorseBlue\ScalarObjects\Types\StringType;
  * Create a new StringType object.
  *
  * @param string|StringType $value
- *
- * @return \NorseBlue\ScalarObjects\Types\StringType
  */
 function string($value = ''): StringType
 {

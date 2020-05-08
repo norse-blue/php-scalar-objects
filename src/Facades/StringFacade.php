@@ -67,6 +67,5 @@ use NorseBlue\ScalarObjects\Types\StringType;
  */
 final class StringFacade extends BaseFacade
 {
-    /** @var string */
-    protected static $target_class = StringType::class;
+    protected static string $target_class = StringType::class;
 }

@@ -15,7 +15,7 @@ class StringReplaceLastTest extends TestCase
         $this->assertEquals('foobar foo', Str::replaceLast('foobar foobar', 'bar', '')->value);
         $this->assertEquals('foobar foobar', Str::replaceLast('foobar foobar', 'xxx', 'yyy')->value);
         $this->assertEquals('foobar foobar', Str::replaceLast('foobar foobar', '', 'yyy')->value);
-        
+
         // Test for multibyte string support
         $this->assertEquals('Malmö Jönkxxxping', Str::replaceLast('Malmö Jönköping', 'ö', 'xxx')->value);
         $this->assertEquals('Malmö Jönköping', Str::replaceLast('Malmö Jönköping', '', 'yyy')->value);

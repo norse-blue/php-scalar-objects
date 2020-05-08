@@ -17,8 +17,6 @@ final class StringStudlyExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the value to studly caps case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             $value = $this->value;

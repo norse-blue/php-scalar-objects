@@ -21,8 +21,6 @@ final class StringWordsExtension extends StringType implements ExtensionMethod
          *
          * @param int|IntType $words
          * @param string|StringType $end
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($words = 100, $end = '...'): StringType {
             $value = $this->value;
@@ -30,7 +28,7 @@ final class StringWordsExtension extends StringType implements ExtensionMethod
 
             preg_match('/^\s*+(?:\S++\s*+){1,' . $words . '}/u', $value, $matches);
 
-            if (!isset($matches[0]) || string($value)->length()->equals(string($matches[0])->length())->isTrue()) {
+            if (! isset($matches[0]) || string($value)->length()->equals(string($matches[0])->length())->isTrue()) {
                 return string($value);
             }
 

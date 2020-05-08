@@ -16,8 +16,6 @@ final class StringLowerCaseFirstExtension extends StringType implements Extensio
     {
         /**
          * Make a string's first character lowercase.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             return $this->substr(0, 1)->lower()->concat($this->substr(1));

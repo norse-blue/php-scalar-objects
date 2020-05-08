@@ -20,8 +20,6 @@ final class StringSlugExtension extends StringType implements ExtensionMethod
          *
          * @param string|StringType $separator
          * @param string|StringType|null $language
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($separator = '-', $language = 'en'): StringType {
             $title = $language ? $this->ascii($language)->value : $this->value;

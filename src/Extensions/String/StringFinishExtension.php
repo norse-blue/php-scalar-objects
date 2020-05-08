@@ -19,8 +19,6 @@ final class StringFinishExtension extends StringType implements ExtensionMethod
          * Cap the value with a single instance of a given value.
          *
          * @param string|StringType $cap
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($cap): StringType {
             $value = $this->value;

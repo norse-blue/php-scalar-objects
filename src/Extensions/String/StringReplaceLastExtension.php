@@ -20,8 +20,6 @@ final class StringReplaceLastExtension extends StringType implements ExtensionMe
          *
          * @param string|StringType $search
          * @param string|StringType $replace
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($search, $replace): StringType {
             $subject = $this->value;

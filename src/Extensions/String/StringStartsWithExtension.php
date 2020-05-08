@@ -13,19 +13,19 @@ use function NorseBlue\ScalarObjects\Functions\string;
 final class StringStartsWithExtension extends StringType implements ExtensionMethod
 {
     /**
-     * @return callable(string|StringType|array $needles): BoolType
+     * @return callable(string|StringType|array<string|StringType> $needles): BoolType
      */
     public function __invoke(): callable
     {
         /**
          * Determine if a given string starts with a given substring.
          *
-         * @param string|StringType|array $needles
+         * @param string|StringType|array<string|StringType> $needles
          *
          * @return BoolType
          */
         return function ($needles): BoolType {
-            foreach ((array)$needles as $needle) {
+            foreach ((array) $needles as $needle) {
                 $needle = self::unwrap($needle);
 
                 if (is_string($needle) && $needle !== ''

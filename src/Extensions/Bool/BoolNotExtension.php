@@ -11,17 +11,15 @@ use function NorseBlue\ScalarObjects\Functions\bool;
 final class BoolNotExtension extends BoolType implements ExtensionMethod
 {
     /**
-     * @return callable(): BollObject
+     * @return callable(): BoolType
      */
     public function __invoke(): callable
     {
         /**
          * Apply the NOT logical operation.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function (): BoolType {
-            return bool(!$this->value);
+            return bool(! $this->value);
         };
     }
 }

@@ -20,8 +20,6 @@ final class StringAsciiExtension extends StringType implements ExtensionMethod
          * Transliterate a UTF-8 value to ASCII.
          *
          * @param string|StringType $language
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($language = 'en'): StringType {
             $value = $this->value;

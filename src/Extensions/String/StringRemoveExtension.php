@@ -19,8 +19,6 @@ final class StringRemoveExtension extends StringType implements ExtensionMethod
          * Remove part(s) of the string.
          *
          * @param string|StringType|array<string|StringType> $remove
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($remove): StringType {
             $remove = self::unwrap($remove);

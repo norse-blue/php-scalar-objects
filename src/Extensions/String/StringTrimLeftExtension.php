@@ -20,8 +20,6 @@ final class StringTrimLeftExtension extends StringType implements ExtensionMetho
          *
          * @param string|StringType $character_mask
          *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
-         *
          * @see https://www.php.net/manual/en/function.ltrim.php
          */
         return function ($character_mask = " \t\n\r\0\x0B"): StringType {

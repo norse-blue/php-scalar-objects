@@ -26,8 +26,6 @@ final class StringIsIpExtension extends StringType implements ExtensionMethod
          *                              - FILTER_FLAG_NO_PRIV_RANGE
          *                              - FILTER_FLAG_NO_RES_RANGE
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/filter.filters.validate.php
          */
         return function ($flags = FILTER_FLAG_NONE): BoolType {

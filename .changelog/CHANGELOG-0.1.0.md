@@ -91,5 +91,4 @@ First release.
 - Added facades for all scalar types for using the functions as if it were `static`.
 
 ---
-
 Previous: [Release 0.0.0](CHANGELOG-0.0.0.md)

@@ -10,7 +10,7 @@ class BoolXorTest extends TestCase
     /** @test */
     public function bool_xor()
     {
-        $false = new BoolType;
+        $false = new BoolType();
         $true = new BoolType(true);
 
         $this->assertFalse($false->xor(false)->value);

@@ -11,8 +11,6 @@ trait NumberCheckMethods
 {
     /**
      * Check if the value is a float.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
     final public function isFloat(): BoolType
     {
@@ -21,8 +19,6 @@ trait NumberCheckMethods
 
     /**
      * Check if the value is an int.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
     final public function isInt(): BoolType
     {
@@ -30,7 +26,7 @@ trait NumberCheckMethods
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     final public function isValid($value): bool
     {
@@ -39,8 +35,6 @@ trait NumberCheckMethods
 
     /**
      * Check if the value is zero.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
     final public function isZero(): BoolType
     {

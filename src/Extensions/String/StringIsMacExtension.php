@@ -23,8 +23,6 @@ final class StringIsMacExtension extends StringType implements ExtensionMethod
          *
          * @param string|StringType|null $separator
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/function.filter-var.php
          */
         return function ($separator = null): BoolType {

@@ -20,10 +20,10 @@ class FloatType extends NumberType
      */
     public function __construct($value = 0.0)
     {
-        if (!$this->isValid($value)) {
+        if (! $this->isValid($value)) {
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((float)self::unwrap($value));
+        parent::__construct((float) self::unwrap($value));
     }
 }

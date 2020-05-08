@@ -51,8 +51,6 @@ class NumberType extends PrimitiveType
      * Compare against another number.
      *
      * @param int|float|NumberType $other
-     *
-     * @return \NorseBlue\ScalarObjects\Types\NumberType
      */
     final public function compare($other): NumberType
     {
@@ -62,14 +60,14 @@ class NumberType extends PrimitiveType
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     final public function equals($other): BoolType
     {
-        if (is_object($other) && !is_subclass_of($other, self::class)) {
+        if (is_object($other) && ! is_subclass_of($other, self::class)) {
             return bool(false);
         }
 
-        return bool((float)$this->compare($other)->value === 0.0);
+        return bool((float) $this->compare($other)->value === 0.0);
     }
 }

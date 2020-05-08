@@ -16,8 +16,6 @@ final class StringKebabExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the value to kebab case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             return $this->snake('-');

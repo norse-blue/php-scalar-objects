@@ -18,8 +18,6 @@ trait StringStaticMethods
      * @param string|StringType $many
      * @param string|StringType $one
      * @param string|StringType|null $zero
-     *
-     * @return \NorseBlue\ScalarObjects\Types\StringType
      */
     public static function accord($count, $many, $one, $zero = null): StringType
     {
@@ -43,8 +41,6 @@ trait StringStaticMethods
      * Generate a more truly "random" alpha-numeric string.
      *
      * @param int|IntType $length
-     *
-     * @return \NorseBlue\ScalarObjects\Types\StringType
      *
      * @throws \Exception
      */

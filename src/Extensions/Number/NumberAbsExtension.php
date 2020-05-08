@@ -17,8 +17,6 @@ final class NumberAbsExtension extends NumberType implements ExtensionMethod
     {
         /**
          * Get the absolute value.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\NumberType
          */
         return function (): NumberType {
             return number(abs($this->value));

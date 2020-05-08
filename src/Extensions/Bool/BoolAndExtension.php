@@ -19,8 +19,6 @@ final class BoolAndExtension extends BoolType implements ExtensionMethod
          * Apply the AND logical operation to the BoolType with the given values.
          *
          * @param bool|BoolType|array<bool|BoolType> ...$bools
-         *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function (...$bools): BoolType {
             if ($this->value === false) {

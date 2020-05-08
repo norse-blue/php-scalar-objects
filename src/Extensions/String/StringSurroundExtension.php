@@ -20,8 +20,6 @@ final class StringSurroundExtension extends StringType implements ExtensionMetho
          *
          * @param string|StringType $prefix
          * @param string|StringType|null $suffix
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($prefix, $suffix = null): StringType {
             $surrounded = $prefix . $this->value;

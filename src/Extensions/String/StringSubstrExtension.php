@@ -21,8 +21,6 @@ final class StringSubstrExtension extends StringType implements ExtensionMethod
          *
          * @param int|IntType $start
          * @param int|IntType|null $length
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($start, $length = null): StringType {
             $string = $this->value;

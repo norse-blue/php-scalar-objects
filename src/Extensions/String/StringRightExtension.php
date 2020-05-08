@@ -21,8 +21,6 @@ final class StringRightExtension extends StringType implements ExtensionMethod
          * Get the right part of the string until the given length.
          *
          * @param int|IntType $length
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($length): StringType {
             $length = int($length);

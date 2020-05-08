@@ -20,8 +20,6 @@ final class StringPadLeftExtension extends StringType implements ExtensionMethod
          *
          * @param int|IntType $pad_length
          * @param string|StringType $pad_string
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($pad_length, $pad_string = ' '): StringType {
             return $this->pad($pad_length, $pad_string, STR_PAD_LEFT);

@@ -10,12 +10,11 @@ use NorseBlue\ValueObjects\SingleImmutableValueObject;
 
 abstract class BaseFacade extends Facade
 {
-    /** @var string */
-    protected static $target_class = SingleImmutableValueObject::class;
+    protected static string $target_class = SingleImmutableValueObject::class;
 
     protected static function enforceFacadeTargetClassType(string $class): void
     {
-        if (!is_subclass_of($class, self::$target_class)) {
+        if (! is_subclass_of($class, self::$target_class)) {
             throw new InvalidFacadeTargetClassException(
                 sprintf('The class "%s" does not extend class "%s".', $class, self::$target_class)
             );

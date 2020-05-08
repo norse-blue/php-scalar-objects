@@ -12,11 +12,11 @@ use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
  *
  * @property bool $value
  *
- * @method self and(bool|self|array<bool|self> ...$bools)
+ * @method self and (bool|self|array<bool|self> ...$bools)
  * @method self equals(bool|self $bool)
  * @method self not()
- * @method self or(bool|self|array<bool|self> ...$bools)
- * @method self xor(bool|self|array<bool|self> ...$bools)
+ * @method self or (bool|self|array<bool|self> ...$bools)
+ * @method self xor (bool|self|array<bool|self> ...$bools)
  *
  * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolAndExtension
  * @see \NorseBlue\ScalarObjects\Extensions\Bool\BoolEqualsExtension
@@ -33,17 +33,15 @@ class BoolType extends PrimitiveType
      */
     public function __construct($value = false)
     {
-        if (!$this->isValid($value)) {
+        if (! $this->isValid($value)) {
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((bool)$value);
+        parent::__construct((bool) $value);
     }
 
     /**
      * Check if the value is false.
-     *
-     * @return bool True if value is false, false otherwise.
      */
     final public function isFalse(): bool
     {
@@ -52,8 +50,6 @@ class BoolType extends PrimitiveType
 
     /**
      * Check if the value is true.
-     *
-     * @return bool True if value is true, false otherwise.
      */
     final public function isTrue(): bool
     {
@@ -61,7 +57,7 @@ class BoolType extends PrimitiveType
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     final public function isValid($value): bool
     {

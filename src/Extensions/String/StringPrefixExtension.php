@@ -19,8 +19,6 @@ final class StringPrefixExtension extends StringType implements ExtensionMethod
          * Prefix the string with the given value.
          *
          * @param string|StringType $prefix
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($prefix): StringType {
             return string($prefix . $this->value);

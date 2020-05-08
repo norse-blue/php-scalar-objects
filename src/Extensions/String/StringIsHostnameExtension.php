@@ -18,8 +18,6 @@ final class StringIsHostnameExtension extends StringType implements ExtensionMet
         /**
          * Checks if the string is a hostname.
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/function.filter-var.php
          */
         return function (): BoolType {

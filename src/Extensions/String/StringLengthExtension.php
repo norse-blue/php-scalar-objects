@@ -20,8 +20,6 @@ final class StringLengthExtension extends StringType implements ExtensionMethod
          * Return the length of the given string.
          *
          * @param string|StringType $encoding
-         *
-         * @return IntType
          */
         return function ($encoding = null): IntType {
             $value = $this->value;
