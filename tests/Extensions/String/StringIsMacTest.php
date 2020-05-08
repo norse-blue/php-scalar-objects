@@ -36,6 +36,7 @@ class StringIsMacTest extends TestCase
             $this->assertFalse(Str::isMac('01-23-45-67-89-ab', '--')->value);
         } catch (Exception $e) {
             $this->assertInstanceOf(MacSeparatorLengthException::class, $e);
+
             return;
         }
 
@@ -49,6 +50,7 @@ class StringIsMacTest extends TestCase
             $this->assertFalse(Str::isMac('01-23-45-67-89-ab', '')->value);
         } catch (Exception $e) {
             $this->assertInstanceOf(MacSeparatorLengthException::class, $e);
+
             return;
         }
 

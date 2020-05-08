@@ -20,8 +20,6 @@ final class StringLeftExtension extends StringType implements ExtensionMethod
          * Get the left part of the string until the given length.
          *
          * @param int|IntType $length
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($length): StringType {
             return $this->substr(0, int($length)->abs()->value);

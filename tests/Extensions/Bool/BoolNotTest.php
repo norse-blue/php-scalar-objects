@@ -10,7 +10,7 @@ class BoolNotTest extends TestCase
     /** @test */
     public function bool_not()
     {
-        $false = new BoolType;
+        $false = new BoolType();
 
         $true = $false->not();
 

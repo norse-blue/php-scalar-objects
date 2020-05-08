@@ -12,21 +12,21 @@ use function NorseBlue\ScalarObjects\Functions\bool;
 final class StringContainsExtension extends StringType implements ExtensionMethod
 {
     /**
-     * @return callable(string|StringType|array $needles): BoolType
+     * @return callable(string|StringType|array<string|StringType> $needles): BoolType
      */
     public function __invoke(): callable
     {
         /**
          * Determine if a given string contains a given substring.
          *
-         * @param string|StringType|array $needles
+         * @param string|StringType|array<string|StringType> $needles
          *
          * @return BoolType
          */
         return function ($needles): BoolType {
             $haystack = $this->value;
 
-            foreach ((array)$needles as $needle) {
+            foreach ((array) $needles as $needle) {
                 $needle = self::unwrap($needle);
 
                 if ($needle !== '' && mb_strpos($haystack, $needle) !== false) {

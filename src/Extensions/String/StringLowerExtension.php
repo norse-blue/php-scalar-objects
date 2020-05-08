@@ -17,8 +17,6 @@ final class StringLowerExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the value to lower-case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             $value = $this->value;

@@ -10,6 +10,7 @@ use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterCastSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\NoSilencedErrorsSniff;
+use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
 use SlevomatCodingStandard\Sniffs\Classes\SuperfluousExceptionNamingSniff;
 use SlevomatCodingStandard\Sniffs\Functions\UnusedParameterSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\UnusedUsesSniff;
@@ -61,6 +62,7 @@ return [
 
         // Style
         LineLengthSniff::class,
+        OrderedImportsFixer::class,
         SpaceAfterCastSniff::class,
         SpaceAfterNotSniff::class,
         UnusedUsesSniff::class,
@@ -69,7 +71,7 @@ return [
     'config' => [
         NoSilencedErrorsSniff::class => [
             'exclude' => [
-                "src/Extensions/String/StringRemoveExtension.php",
+                'src/Extensions/String/StringRemoveExtension.php',
             ],
         ],
     ],

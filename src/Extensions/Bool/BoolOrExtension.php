@@ -19,8 +19,6 @@ final class BoolOrExtension extends BoolType implements ExtensionMethod
          * Apply the OR logical operation to the BoolType with the given values.
          *
          * @param bool|BoolType|array<bool|BoolType> ...$bools
-         *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function (...$bools): BoolType {
             if ($this->value === true) {

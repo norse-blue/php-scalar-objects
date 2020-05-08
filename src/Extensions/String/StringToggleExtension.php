@@ -21,8 +21,6 @@ final class StringToggleExtension extends StringType implements ExtensionMethod
          *
          * @param array<string|StringType> $options
          * @param bool|BoolType $strict Whether a string neither matching 1 or 2 should be changed
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($options, $strict = false): StringType {
             $options = array_values($options);

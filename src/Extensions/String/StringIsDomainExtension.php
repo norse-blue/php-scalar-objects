@@ -21,8 +21,6 @@ final class StringIsDomainExtension extends StringType implements ExtensionMetho
          *
          * @param bool|BoolType $is_hostname
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/function.filter-var.php
          */
         return function ($is_hostname = false): BoolType {

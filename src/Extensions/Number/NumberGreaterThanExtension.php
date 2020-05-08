@@ -20,8 +20,6 @@ final class NumberGreaterThanExtension extends NumberType implements ExtensionMe
          * Check if the value is greater than the given number.
          *
          * @param int|float|NumberType $number
-         *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
          */
         return function ($number): BoolType {
             return bool($this->value > self::unwrap($number));

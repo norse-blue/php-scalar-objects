@@ -21,8 +21,6 @@ final class StringIsEmailExtension extends StringType implements ExtensionMethod
          *
          * @param bool|BoolType $email_unicode
          *
-         * @return \NorseBlue\ScalarObjects\Types\BoolType
-         *
          * @see https://www.php.net/manual/en/function.filter-var.php
          */
         return function ($email_unicode = false): BoolType {

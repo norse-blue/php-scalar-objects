@@ -10,7 +10,7 @@ class BoolOrTest extends TestCase
     /** @test */
     public function bool_or()
     {
-        $false = new BoolType;
+        $false = new BoolType();
         $true = new BoolType(true);
 
         $this->assertFalse($false->or(false)->value);

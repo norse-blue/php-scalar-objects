@@ -17,8 +17,6 @@ final class StringUpperExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the value to upper-case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             $value = $this->value;

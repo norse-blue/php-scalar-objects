@@ -16,8 +16,6 @@ final class StringCamelExtension extends StringType implements ExtensionMethod
     {
         /**
          * Convert the value to camel case.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             return $this->studly()->lowerCaseFirst();

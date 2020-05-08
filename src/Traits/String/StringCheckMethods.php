@@ -11,8 +11,6 @@ trait StringCheckMethods
 {
     /**
      * Check if the value is empty.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\BoolType
      */
     final public function isEmpty(): BoolType
     {
@@ -20,7 +18,7 @@ trait StringCheckMethods
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     final public function isValid($value): bool
     {

@@ -20,8 +20,6 @@ final class StringReplaceExtension extends StringType implements ExtensionMethod
          *
          * @param string|StringType $search
          * @param string|StringType $replace
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($search, $replace): StringType {
             return string(str_replace($search, $replace, $this->value, $count));

@@ -120,6 +120,8 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringUpperCaseFirstExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringUpperExtension
  * @see \NorseBlue\ScalarObjects\Extensions\String\StringWordsExtension
+ *
+ * @implements ArrayAccess<int, string>
  */
 class StringType extends PrimitiveType implements ArrayAccess, Countable
 {
@@ -135,11 +137,11 @@ class StringType extends PrimitiveType implements ArrayAccess, Countable
      */
     public function __construct($value = '')
     {
-        if (!$this->isValid($value)) {
+        if (! $this->isValid($value)) {
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((string)self::unwrap($value));
+        parent::__construct((string) self::unwrap($value));
     }
 
     /**
@@ -147,8 +149,6 @@ class StringType extends PrimitiveType implements ArrayAccess, Countable
      *
      * @param string|StringType $string
      * @param bool|BoolType $case_insensitive
-     *
-     * @return \NorseBlue\ScalarObjects\Types\IntType
      */
     final public function compare($string, $case_insensitive = false): IntType
     {
@@ -160,11 +160,11 @@ class StringType extends PrimitiveType implements ArrayAccess, Countable
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
-    final public function equals($other, $case_insensitive = false): BoolType
+    final public function equals($other, bool $case_insensitive = false): BoolType
     {
-        if (is_object($other) && !$other instanceof self) {
+        if (is_object($other) && ! $other instanceof self) {
             return bool(false);
         }
 

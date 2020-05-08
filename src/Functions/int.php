@@ -11,8 +11,6 @@ use NorseBlue\ScalarObjects\Types\NumberType;
  * Create a new IntType object.
  *
  * @param int|float|NumberType $value
- *
- * @return \NorseBlue\ScalarObjects\Types\IntType
  */
 function int($value = 0): IntType
 {

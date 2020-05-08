@@ -7,12 +7,7 @@ namespace NorseBlue\ScalarObjects;
 /**
  * Merge the path segments to the base path.
  *
- * @param string $base
  * @param string|array<string> $segments
- * @param string $separator
- * @param bool $trailing_separator
- *
- * @return string
  *
  * @codeCoverageIgnore
  */
@@ -24,7 +19,7 @@ function path_merge(
 ): string {
     $path = rtrim($base, $separator);
 
-    if (!is_array($segments)) {
+    if (! is_array($segments)) {
         $segments = [$segments];
     }
 

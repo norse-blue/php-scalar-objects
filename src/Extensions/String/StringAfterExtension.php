@@ -19,8 +19,6 @@ final class StringAfterExtension extends StringType implements ExtensionMethod
          * Return the remainder of the value after a given value.
          *
          * @param string|StringType $search
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($search): StringType {
             $value = $this->value;

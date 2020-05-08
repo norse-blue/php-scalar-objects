@@ -20,8 +20,6 @@ final class StringExplodeExtension extends StringType implements ExtensionMethod
          *
          * @param string|StringType $delimiter
          * @param int|IntType|null $limit
-         *
-         * @return array
          */
         return function ($delimiter, $limit = PHP_INT_MAX): array {
             return explode($delimiter, $this->value, IntType::unwrap($limit));

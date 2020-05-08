@@ -25,13 +25,13 @@ use Symfony\Component\Finder\Finder;
 
     foreach ($extensible_classes as $class) {
         $pattern = '%^NorseBlue\\\\ScalarObjects\\\\Types\\\\(?<type>\w+?)(?:Type)?$%';
-        if (!preg_match($pattern, $class, $data)) {
+        if (! preg_match($pattern, $class, $data)) {
             continue;
         }
 
         $type = $data['type'];
         $extensions_path = path_merge(__DIR__, ['Extensions', $type]);
-        if (!is_dir($extensions_path)) {
+        if (! is_dir($extensions_path)) {
             continue;
         }
 

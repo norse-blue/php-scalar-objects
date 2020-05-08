@@ -12,7 +12,8 @@ use function NorseBlue\ScalarObjects\Functions\string;
 final class StringPadExtension extends StringType implements ExtensionMethod
 {
     /**
-     * @return callable(int|IntType $pad_length, string|StringType $pad_string = '0', int|IntType $pad_side = STR_PAD_BOTH): StringType
+     * @return callable(int|IntType $pad_length, string|StringType $pad_string = '0', int|IntType $pad_side =
+     *     STR_PAD_BOTH): StringType
      */
     public function __invoke(): callable
     {
@@ -22,8 +23,6 @@ final class StringPadExtension extends StringType implements ExtensionMethod
          * @param int|IntType $pad_length
          * @param string|StringType $pad_string
          * @param int|IntType $pad_side
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($pad_length, $pad_string = ' ', $pad_side = STR_PAD_BOTH): StringType {
             return string(

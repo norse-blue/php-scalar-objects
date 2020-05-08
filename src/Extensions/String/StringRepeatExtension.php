@@ -20,8 +20,6 @@ final class StringRepeatExtension extends StringType implements ExtensionMethod
          * Repeat a string n times.
          *
          * @param int|IntType $times
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function ($times = 2): StringType {
             $value = $this->value;

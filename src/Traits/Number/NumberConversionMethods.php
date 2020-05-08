@@ -13,8 +13,6 @@ trait NumberConversionMethods
 {
     /**
      * Convert the value to float.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\FloatType
      */
     final public function toFloat(): FloatType
     {
@@ -23,8 +21,6 @@ trait NumberConversionMethods
 
     /**
      * Convert the value to int.
-     *
-     * @return \NorseBlue\ScalarObjects\Types\IntType
      */
     final public function toInt(): IntType
     {

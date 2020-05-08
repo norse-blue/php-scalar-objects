@@ -16,8 +16,6 @@ final class StringUpperCaseFirstExtension extends StringType implements Extensio
     {
         /**
          * Make a string's first character uppercase.
-         *
-         * @return \NorseBlue\ScalarObjects\Types\StringType
          */
         return function (): StringType {
             return $this->substr(0, 1)->upper()->concat($this->substr(1));
