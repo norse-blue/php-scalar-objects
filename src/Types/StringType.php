@@ -27,7 +27,6 @@ use function NorseBlue\ScalarObjects\Functions\int;
  * @method self concat(string|self ...$strings)
  * @method BoolType contains(string|self|array $needles)
  * @method BoolType endsWith(string|self|array $needles)
- * @method BoolType equals(string|self $string, bool $case_insensitive = false)
  * @method array explode(string|StringType $delimiter, int|IntType|null $limit = PHP_INT_MAX)
  * @method self finish(string|self $cap)
  * @method BoolType isDomain(bool|BoolType $is_hostname = false)
