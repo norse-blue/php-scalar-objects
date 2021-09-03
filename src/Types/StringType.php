@@ -12,6 +12,7 @@ use NorseBlue\ScalarObjects\Traits\String\StringCheckMethods;
 use NorseBlue\ScalarObjects\Traits\String\StringCountable;
 use NorseBlue\ScalarObjects\Traits\String\StringStaticMethods;
 use NorseBlue\ValueObjects\Exceptions\InvalidValueException;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\int;
 
@@ -145,11 +146,8 @@ class StringType extends PrimitiveType implements ArrayAccess, Countable
 
     /**
      * Compare the object against a given value.
-     *
-     * @param string|StringType $string
-     * @param bool|BoolType $case_insensitive
      */
-    final public function compare($string, $case_insensitive = false): IntType
+    final public function compare(string|StringType $string, bool|BoolType $case_insensitive = false): IntType
     {
         $value = $this->value;
         $string = self::unwrap($string);
@@ -158,9 +156,6 @@ class StringType extends PrimitiveType implements ArrayAccess, Countable
         return int($case_insensitive->isTrue() ? strcasecmp($value, $string) : strcmp($value, $string));
     }
 
-    /**
-     * {@inheritdoc}
-     */
     final public function equals($other, bool $case_insensitive = false): BoolType
     {
         if (is_object($other) && ! $other instanceof self) {

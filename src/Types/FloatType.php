@@ -24,6 +24,6 @@ class FloatType extends NumberType
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((float) self::unwrap($value));
+        parent::__construct((float)self::unwrap($value));
     }
 }

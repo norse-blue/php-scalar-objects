@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Extensions\Number;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\NumberType;
+
 use function NorseBlue\ScalarObjects\Functions\Number;
 
 final class NumberAbsExtension extends NumberType implements ExtensionMethod

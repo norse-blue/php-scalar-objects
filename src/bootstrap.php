@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @codeCoverageIgnore
+ */
+
 declare(strict_types=1);
 
 namespace NorseBlue\ScalarObjects;
@@ -11,9 +15,6 @@ use NorseBlue\ScalarObjects\Types\NumberType;
 use NorseBlue\ScalarObjects\Types\StringType;
 use Symfony\Component\Finder\Finder;
 
-/**
- * @codeCoverageIgnore
- */
 (static function (): void {
     $extensible_classes = [
         BoolType::class,
@@ -46,7 +47,7 @@ use Symfony\Component\Finder\Finder;
 
         foreach ($extensions as $path) {
             $pattern = '%^' . path_merge($extensions_path, $type) . '(.+)Extension\.php$%';
-            $name = preg_replace($pattern, '\1', $path);
+            $name = preg_replace($pattern, '\1', $path) ?? '';
             $extension = path_merge(
                 'NorseBlue\ScalarObjects',
                 [

@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Types;
 use NorseBlue\ScalarObjects\PrimitiveType;
 use NorseBlue\ScalarObjects\Traits\Number\NumberCheckMethods;
 use NorseBlue\ScalarObjects\Traits\Number\NumberConversionMethods;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\number;
 
@@ -49,19 +50,14 @@ class NumberType extends PrimitiveType
 
     /**
      * Compare against another number.
-     *
-     * @param int|float|NumberType $other
      */
-    final public function compare($other): NumberType
+    final public function compare(int|float|NumberType $other): NumberType
     {
         $other = self::unwrap($other);
 
         return number($this->value - $other);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     final public function equals($other): BoolType
     {
         if (is_object($other) && ! is_subclass_of($other, self::class)) {

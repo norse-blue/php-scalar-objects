@@ -13,7 +13,7 @@ namespace NorseBlue\ScalarObjects;
  */
 function path_merge(
     string $base,
-    $segments,
+    string|array $segments,
     string $separator = DIRECTORY_SEPARATOR,
     bool $trailing_separator = false
 ): string {

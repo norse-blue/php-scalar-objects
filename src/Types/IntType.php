@@ -24,6 +24,6 @@ class IntType extends NumberType
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((int) self::unwrap($value));
+        parent::__construct((int)self::unwrap($value));
     }
 }

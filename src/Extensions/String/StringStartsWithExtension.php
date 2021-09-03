@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\string;
 
@@ -28,7 +29,8 @@ final class StringStartsWithExtension extends StringType implements ExtensionMet
             foreach ((array) $needles as $needle) {
                 $needle = self::unwrap($needle);
 
-                if (is_string($needle) && $needle !== ''
+                if (
+                    is_string($needle) && $needle !== ''
                     && $this->substr(0, string($needle)->length()->value)->equals($needle)->isTrue()
                 ) {
                     return bool(true);

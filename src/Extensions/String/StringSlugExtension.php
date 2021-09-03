@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\string;
 
 final class StringSlugExtension extends StringType implements ExtensionMethod
@@ -28,7 +29,7 @@ final class StringSlugExtension extends StringType implements ExtensionMethod
             // Convert all dashes/underscores into separator
             $flip = $separator === '-' ? '_' : '-';
 
-            $title = preg_replace('![' . preg_quote($flip, '!') . ']+!u', $separator, $title);
+            $title = preg_replace('![' . preg_quote($flip, '!') . ']+!u', $separator, $title) ?? '';
 
             // Replace @ with the word 'at'
             $title = str_replace('@', $separator . 'at' . $separator, $title);
@@ -38,10 +39,10 @@ final class StringSlugExtension extends StringType implements ExtensionMethod
                 '![^' . preg_quote($separator, '!') . '\pL\pN\s]+!u',
                 '',
                 string($title)->lower()->value
-            );
+            ) ?? '';
 
             // Replace all separator characters and whitespace by a single separator
-            $title = preg_replace('![' . preg_quote($separator, '!') . '\s]+!u', $separator, $title);
+            $title = preg_replace('![' . preg_quote($separator, '!') . '\s]+!u', $separator, $title) ?? '';
 
             return string(trim($title, $separator));
         };

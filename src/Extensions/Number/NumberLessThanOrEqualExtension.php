@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\Number;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\NumberType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 final class NumberLessThanOrEqualExtension extends NumberType implements ExtensionMethod

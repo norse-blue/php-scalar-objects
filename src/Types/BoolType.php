@@ -37,7 +37,7 @@ class BoolType extends PrimitiveType
             throw new InvalidValueException('The given value is not valid.');
         }
 
-        parent::__construct((bool) $value);
+        parent::__construct((bool)$value);
     }
 
     /**
@@ -56,10 +56,7 @@ class BoolType extends PrimitiveType
         return $this->value === true;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    final public function isValid($value): bool
+    final public function isValid(mixed $value): bool
     {
         return is_bool($value) || $value instanceof self;
     }

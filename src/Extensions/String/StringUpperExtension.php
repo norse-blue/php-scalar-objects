@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\string;
 
 final class StringUpperExtension extends StringType implements ExtensionMethod

@@ -8,6 +8,7 @@ use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 final class StringIsUrlExtension extends StringType implements ExtensionMethod

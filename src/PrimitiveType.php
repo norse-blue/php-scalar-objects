@@ -8,6 +8,7 @@ use NorseBlue\ExtensibleObjects\Contracts\Extensible;
 use NorseBlue\ExtensibleObjects\Traits\HandlesExtensionMethods;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ValueObjects\SingleImmutableValueObject;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 abstract class PrimitiveType extends SingleImmutableValueObject implements Extensible

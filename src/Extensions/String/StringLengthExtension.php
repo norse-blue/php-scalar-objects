@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\int;
 
 final class StringLengthExtension extends StringType implements ExtensionMethod

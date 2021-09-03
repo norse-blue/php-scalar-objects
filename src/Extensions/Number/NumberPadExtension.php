@@ -8,6 +8,7 @@ use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\NumberType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\string;
 
 final class NumberPadExtension extends NumberType implements ExtensionMethod

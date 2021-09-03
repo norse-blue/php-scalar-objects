@@ -8,6 +8,7 @@ use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Exceptions\String\MacSeparatorLengthException;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 use function NorseBlue\ScalarObjects\Functions\string;
 
@@ -34,7 +35,7 @@ final class StringIsMacExtension extends StringType implements ExtensionMethod
                 filter_var(
                     $this->value,
                     FILTER_VALIDATE_MAC,
-                    $separator ? ['options' => ['separator' => self::unwrap($separator)]] : null
+                    $separator ? ['options' => ['separator' => self::unwrap($separator)]] : []
                 ) !== false
             );
         };

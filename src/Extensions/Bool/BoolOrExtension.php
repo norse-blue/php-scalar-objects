@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Extensions\Bool;
 
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\BoolType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 final class BoolOrExtension extends BoolType implements ExtensionMethod

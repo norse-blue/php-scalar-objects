@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\int;
 
 final class StringLeftExtension extends StringType implements ExtensionMethod
@@ -22,7 +23,7 @@ final class StringLeftExtension extends StringType implements ExtensionMethod
          * @param int|IntType $length
          */
         return function ($length): StringType {
-            return $this->substr(0, int($length)->abs()->value);
+            return $this->substr(0, int($length)->abs()->toInt()->value);
         };
     }
 }

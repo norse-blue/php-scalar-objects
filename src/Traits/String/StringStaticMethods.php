@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Traits\String;
 
 use NorseBlue\ScalarObjects\Types\IntType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\string;
 
 trait StringStaticMethods

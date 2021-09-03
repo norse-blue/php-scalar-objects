@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Support\Character;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\string;
 
 final class StringAsciiExtension extends StringType implements ExtensionMethod
@@ -32,10 +33,10 @@ final class StringAsciiExtension extends StringType implements ExtensionMethod
             }
 
             foreach (Character::charsArray() as $key => $val) {
-                $value = str_replace($val, $key, $value);
+                $value = str_replace($val, (string)$key, $value);
             }
 
-            return string(preg_replace('/[^\x20-\x7E]/u', '', $value));
+            return string(preg_replace('/[^\x20-\x7E]/u', '', $value) ?? '');
         };
     }
 }

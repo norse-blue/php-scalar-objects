@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace NorseBlue\ScalarObjects\Traits\String;
 
 use NorseBlue\ScalarObjects\Types\BoolType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 trait StringCheckMethods
@@ -17,10 +18,7 @@ trait StringCheckMethods
         return bool($this->value === '');
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    final public function isValid($value): bool
+    final public function isValid(mixed $value): bool
     {
         return is_string($value) || $value instanceof self;
     }

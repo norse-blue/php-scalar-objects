@@ -6,6 +6,7 @@ namespace NorseBlue\ScalarObjects\Traits\Number;
 
 use NorseBlue\ScalarObjects\Types\FloatType;
 use NorseBlue\ScalarObjects\Types\IntType;
+
 use function NorseBlue\ScalarObjects\Functions\float;
 use function NorseBlue\ScalarObjects\Functions\int;
 

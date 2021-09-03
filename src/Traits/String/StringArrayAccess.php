@@ -33,7 +33,7 @@ trait StringArrayAccess
      *
      * @link https://php.net/manual/en/arrayaccess.offsetget.php
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (! $this->offsetExists($offset)) {
             throw new OutOfBoundsException('The given index does not exist.');

@@ -7,6 +7,7 @@ namespace NorseBlue\ScalarObjects\Extensions\String;
 use NorseBlue\ExtensibleObjects\Contracts\ExtensionMethod;
 use NorseBlue\ScalarObjects\Types\BoolType;
 use NorseBlue\ScalarObjects\Types\StringType;
+
 use function NorseBlue\ScalarObjects\Functions\bool;
 
 final class StringContainsExtension extends StringType implements ExtensionMethod
